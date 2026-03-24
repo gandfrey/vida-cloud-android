@@ -2113,7 +2113,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
 
     private void syncFolderIncludingAllNestedFiles(OCFile folder) {
         if (FileStorageUtils.checkIfEnoughSpace(folder)) {
-            mContainerActivity.getFileOperationsHelper().syncFileOrFolder(folder, false, true);
+            mContainerActivity.getFileOperationsHelper().syncFolderIncludingNestedFiles(folder);
         } else {
             SyncFileNotEnoughSpaceDialogFragment
                 .newInstance(folder, FileOperationsHelper.getAvailableSpaceOnDevice())
