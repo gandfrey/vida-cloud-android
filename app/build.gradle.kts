@@ -101,7 +101,7 @@ android {
             "TEST_SERVER_PASSWORD" to ncTestServerPassword.toString(),
             "disableAnalytics" to "true"
         )
-        applicationId = "com.nextcloud.client"
+        applicationId = "com.vidatools.cloud"
         minSdk = 28
         targetSdk = 36
         compileSdk = 36
@@ -115,7 +115,7 @@ android {
 
         // arguments to be passed to functional tests
         testInstrumentationRunner = if (shotTest) "com.karumi.shot.ShotTestRunner"
-        else "com.nextcloud.client.TestRunner"
+        else "com.vidatools.cloud.TestRunner"
 
         versionCode = versionMajor * 10000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
         versionName = when {
@@ -144,29 +144,29 @@ android {
         productFlavors {
             // used for f-droid
             register("generic") {
-                applicationId = "com.nextcloud.client"
+                applicationId = "com.vidatools.cloud"
                 dimension = "default"
             }
 
             register("gplay") {
-                applicationId = "com.nextcloud.client"
+                applicationId = "com.vidatools.cloud"
                 dimension = "default"
             }
 
             register("huawei") {
-                applicationId = "com.nextcloud.client"
+                applicationId = "com.vidatools.cloud"
                 dimension = "default"
             }
 
             register("versionDev") {
-                applicationId = "com.nextcloud.android.beta"
+                applicationId = "com.vidatools.cloud.beta"
                 dimension = "default"
                 versionCode = 20220322
                 versionName = "20220322"
             }
 
             register("qa") {
-                applicationId = "com.nextcloud.android.qa"
+                applicationId = "com.vidatools.cloud.qa"
                 dimension = "default"
                 versionCode = 1
                 versionName = "1"
